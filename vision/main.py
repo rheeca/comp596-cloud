@@ -4,7 +4,6 @@ from google.cloud import vision
 from typing import Sequence
 
 SOURCE = "images"
-DEST = "outputs"
 PATH_OSCAR = "test.jpg"
 PATH_FLORIST = "test2.jpg"
 PATH_CAFE = "test3.jpg"
@@ -47,7 +46,7 @@ def draw_bounding_box(image_path, result):
         vertices = annotation.bounding_poly.vertices
         cv2.rectangle(image, (vertices[0].x, vertices[0].y), (vertices[2].x, vertices[2].y), (0, 255, 0), 2) 
 
-    cv2.imwrite(os.path.join(DEST, image_path), image)
+    cv2.imwrite(image_path, image)
 
 
 # ----------------------------------------------
