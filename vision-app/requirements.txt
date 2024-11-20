@@ -1,4 +1,6 @@
 flask~=3.0.3
-google-cloud-vision
-opencv-python
 google-cloud-storage
+google-cloud-vision
+numpy
+opencv-python
+pillow
